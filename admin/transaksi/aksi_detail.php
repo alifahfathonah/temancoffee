@@ -42,7 +42,7 @@ if($aksi == 'ubah_status'){
 
 	$update = mysqli_query($koneksi,"UPDATE bukti_transaksi SET status = '$status' where id_transaksi = '$id_transaksi'");
 
-	if ($status = 'valid') {
+	if ($status == 'Valid') {
 		$update_transaksi = mysqli_query($koneksi,"UPDATE transaksi SET status = 'Pesanan Diproses' where id_transaksi = '$id_transaksi'");
 	}
 	
